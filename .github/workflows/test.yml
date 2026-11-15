@@ -1,14 +1,12 @@
 name: test
 on:
+  # bench-only: run on each PR into starsling/develop; no push trigger.
   pull_request:
     branches:
-      - "*"
-  push:
-    branches:
-      - "*"
+      - starsling/develop
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: starsling-ubuntu-26.04
     strategy:
       fail-fast: false
       matrix:
@@ -50,7 +48,7 @@ jobs:
           `go env GOPATH`/bin/gotip test ./...
   golangci:
     name: Linting
-    runs-on: ubuntu-latest
+    runs-on: starsling-ubuntu-26.04
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-go@v7

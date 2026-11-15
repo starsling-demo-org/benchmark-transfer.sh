@@ -1,18 +1,13 @@
 name: deploy multi-architecture Docker images for transfer.sh with buildx
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # everyday at midnight UTC
+  # bench-only: run on each PR into starsling/develop; no schedule or push trigger.
   pull_request:
-    branches: main
-  push:
-    branches: main
-    tags:
-      - v*
+    branches: [starsling/develop]
 
 jobs:
   buildx:
-    runs-on: ubuntu-latest
+    runs-on: starsling-ubuntu-26.04
     steps:
       -
         name: Checkout
