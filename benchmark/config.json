@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repository": "dutchcoders/transfer.sh",
+    "commitSha": "20efd89137d4fe13122e1b4cd48b1deab0f34fbd",
+    "defaultBranch": "main"
+  },
+  "benchmarkRepository": {
+    "repository": "starsling-demo-org/benchmark-transfer.sh",
+    "controlBranch": "bench/control",
+    "defaultBranch": "showcase",
+    "replayBranch": "main"
+  },
+  "scenarios": {
+    "main-push": {
+      "name": "main-push",
+      "description": "Merge of 20efd89137d4 to main",
+      "event": "push",
+      "main": {
+        "branch": "main",
+        "beforeSha": "eae01b5b953adb928ec804f66ac8b8fe6bbfb503",
+        "afterSha": "20efd89137d4fe13122e1b4cd48b1deab0f34fbd",
+        "changedPaths": [
+          "README.md"
+        ]
+      },
+      "referenceRuns": [
+        {
+          "workflowPath": ".github/workflows/build-docker-images.yml",
+          "runId": 41252787938,
+          "attempt": 1,
+          "htmlUrl": "https://github.com/dutchcoders/transfer.sh/actions/runs/41252787938"
+        },
+        {
+          "workflowPath": ".github/workflows/test.yml",
+          "runId": 41252788045,
+          "attempt": 1,
+          "htmlUrl": "https://github.com/dutchcoders/transfer.sh/actions/runs/41252788045"
+        }
+      ]
+    },
+    "seed-parent": {
+      "name": "seed-parent",
+      "role": "seed",
+      "description": "Warm seed: the previous push (eae01b5b953a onto c2f4a4cff8aa)",
+      "event": "push",
+      "main": {
+        "branch": "main",
+        "beforeSha": "c2f4a4cff8aa06d47d3d5e15294dc970feec8e75",
+        "afterSha": "eae01b5b953adb928ec804f66ac8b8fe6bbfb503",
+        "changedPaths": [
+          "SECURITY.md"
+        ]
+      },
+      "referenceRuns": []
+    }
+  },
+  "patches": [
+    {
+      "id": "stack-0",
+      "source": "local",
+      "pathOrUrl": "patches/stack-0.patch",
+      "description": "levers stacked in order: 01-dockerfile-cross-compile, 02-gotip-cache"
+    }
+  ],
+  "runnerMapping": {
+    "defaultMap": {
+      "ubuntu-latest": {
+        "github": "ubuntu-26.04-4core",
+        "starsling": "starsling-ubuntu-26.04"
+      },
+      "ubuntu-24.04": {
+        "starsling": "starsling-ubuntu-24.04"
+      },
+      "ubuntu-26.04": {
+        "starsling": "starsling-ubuntu-26.04"
+      },
+      "ubuntu-slim": {
+        "starsling": "starsling-ubuntu-24.04-2"
+      }
+    },
+    "runnerSpecs": {
+      "ubuntu-latest": {
+        "label": "ubuntu-latest",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "ubuntu-24.04": {
+        "label": "ubuntu-24.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "ubuntu-26.04": {
+        "label": "ubuntu-26.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "ubuntu-slim": {
+        "label": "ubuntu-slim",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 1,
+        "ramGiB": 5
+      },
+      "starsling-ubuntu-24.04-2": {
+        "label": "starsling-ubuntu-24.04-2",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 2,
+        "ramGiB": 8
+      },
+      "starsling-ubuntu-24.04": {
+        "label": "starsling-ubuntu-24.04",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "starsling-ubuntu-26.04": {
+        "label": "starsling-ubuntu-26.04",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "macos-latest": {
+        "label": "macos-latest",
+        "provider": "github",
+        "os": "macos",
+        "arch": "arm64",
+        "vcpu": 3,
+        "ramGiB": 7
+      },
+      "windows-latest": {
+        "label": "windows-latest",
+        "provider": "github",
+        "os": "windows",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      },
+      "ubuntu-26.04-4core": {
+        "label": "ubuntu-26.04-4core",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16
+      }
+    }
+  },
+  "profiles": {
+    "cold": {
+      "name": "cold",
+      "actionsCache": "cold",
+      "crossRunArtifacts": "none",
+      "restoreExpectations": {},
+      "testResultReuseAllowed": false
+    },
+    "warm": {
+      "name": "warm",
+      "actionsCache": "warm",
+      "crossRunArtifacts": "seeded",
+      "seedScenario": "seed-parent",
+      "restoreExpectations": {},
+      "testResultReuseAllowed": true,
+      "amortizationHorizonRuns": 10
+    }
+  },
+  "adaptations": [
+    {
+      "id": "no-registry-login-or-push",
+      "kind": "deployment-guard",
+      "workflowFile": ".github/workflows/build-docker-images.yml",
+      "jobId": "buildx",
+      "fromPattern": "success() && github.event_name != 'pull_request'",
+      "toReplacement": "false && success() && github.event_name != 'pull_request'",
+      "expectedMatches": 2,
+      "reason": "Docker Login and Docker Buildx (push) steps: DOCKER_USERNAME / DOCKER_PASSWORD do not exist and nothing may be published; upstream guard kept, 'false &&' in front",
+      "blocksFullParity": true
+    },
+    {
+      "id": "no-manifest-check-or-clear",
+      "kind": "deployment-guard",
+      "workflowFile": ".github/workflows/build-docker-images.yml",
+      "jobId": "buildx",
+      "fromPattern": "always() && github.event_name != 'pull_request'",
+      "toReplacement": "false && always() && github.event_name != 'pull_request'",
+      "expectedMatches": 2,
+      "reason": "Docker Check Manifest and Clear steps: the manifest check reads an image that is never pushed; upstream guard kept, 'false &&' in front",
+      "blocksFullParity": true
+    },
+    {
+      "id": "secret-gate-docker-username",
+      "kind": "secret-gate-annotation",
+      "workflowFile": ".github/workflows/build-docker-images.yml",
+      "jobId": "buildx",
+      "fromPattern": "${{ secrets.DOCKER_USERNAME }}",
+      "toReplacement": "",
+      "expectedMatches": 1,
+      "reason": "DOCKER_USERNAME does not exist in the benchmark org; only the Docker Login step reads it, and no-registry-login-or-push turns that step off. The reference is removed so no configuration reads it.",
+      "blocksFullParity": false
+    },
+    {
+      "id": "secret-gate-docker-password",
+      "kind": "secret-gate-annotation",
+      "workflowFile": ".github/workflows/build-docker-images.yml",
+      "jobId": "buildx",
+      "fromPattern": "${{ secrets.DOCKER_PASSWORD }}",
+      "toReplacement": "",
+      "expectedMatches": 1,
+      "reason": "DOCKER_PASSWORD does not exist in the benchmark org; only the Docker Login step reads it, and no-registry-login-or-push turns that step off. The reference is removed so no configuration reads it.",
+      "blocksFullParity": false
+    }
+  ],
+  "collectors": [],
+  "execution": {
+    "repetitions": 5,
+    "timeoutMinutes": 60,
+    "maxConcurrentExperiments": 1,
+    "pollIntervalSeconds": 15,
+    "apiBudgetPerHour": 252,
+    "maxJobQueueSeconds": 30,
+    "publicRepoGitHubFree": true,
+    "commitIdentity": {
+      "name": "starsling-dev",
+      "email": "290538643+starsling-dev@users.noreply.github.com"
+    }
+  },
+  "instrumentation": true
+}
