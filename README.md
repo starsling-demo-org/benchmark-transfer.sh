@@ -45,7 +45,7 @@ GitHub-hosted jobs run on the explicit GitHub larger-runner label shown, pinned 
 - [x] **Same checks, same results:** the same 25 checks ran and passed in every counted sample, cold and warm
 - [x] **Cache state verified** for every sample
 - [x] **Both runner configurations measured** (2 of 2), cold and warm
-- [x] **All requested samples finished** (20 of 20; 1 sample was re-run and replaced, see Method)
+- [x] **All requested samples finished** (20 of 20; 2 samples were replaced and re-run, see Method)
 - [x] **At least 5 rounds** (5 requested, cold and warm)
 - [x] **No interference:** no other workflow run overlapped a sample
 - [x] **Cost neutral:** the agent PR adds no parallel jobs that spend the freed runner time
@@ -139,7 +139,7 @@ Each cell is the whole wait for that merge and links to its run.
 6. **Check.** Replays are compared job by job with upstream's own runs for the same commit, and every sample's test verdicts, coverage and cache restores are read from its own job logs.
 
 - **Control configuration.** Each round also replayed the event on StarSling runners with the CI unchanged, as an internal control. It is not part of this comparison, and its samples are not shown in the tables on this page; they are in the data files under `benchmark/`.
-- **Default branch.** The default branch is `main`.
+- **Default branch.** Upstream's default branch is `main`.
 - **Workflows in this merge.** The replayed merge changes only `README.md`. Upstream's `test.yml` and `build-docker-images.yml` have no path filters, so both run on every merge to the default branch. `release.yml` runs only on a published release or a manual dispatch, so it does not run here (upstream's own run for it on this merge was a workflow-file error with no jobs).
 - **Bench-only changes, identical in every configuration and never part of the agent PR:**
   - Switched off: the Docker Hub login, the image push step (`Docker Buildx (push)`), the manifest check and the `Clear` step. Upstream's own condition is kept with `false &&` in front. The registry secrets do not exist here and nothing may be published. Upstream did run these steps on this merge (the `Docker Buildx (push)` step builds both images again and publishes them), so that upstream work is not in any column.
@@ -147,11 +147,11 @@ Each cell is the whole wait for that merge and links to its run.
   - Runner labels: upstream's `ubuntu-latest` is replaced by the runner label of each configuration (see Runner sizes).
   - One harness step, `Benchmark event context (harness)`, is added at the start of every job. It prints two IDs so each job can be matched to its sample; its median time is 0 s.
   - On the agent PR's own branch (`starsling/develop`) only, a setup commit points the two workflows' triggers at that branch and their runners at StarSling, so the PR's checks run there. The measured replays do not use it.
-- **Replaced samples.** One sample that never finished was discarded and re-run. It was the StarSling Runners (with agents) sample of cold round 4, and it left no record. The experiment was reopened (the reopening is recorded in `experiments/full-1`) and the sample re-run from a fresh cold cache. Separately, the StarSling Runners (with agents) sample of cold round 3 failed at `actions/checkout` in two test jobs before any test ran, and was re-run; that is the 1 re-run sample counted below. In every counted sample, no job waited more than 19 s for a runner.
+- **Replaced samples.** One sample that never finished was discarded and re-run. It was the StarSling Runners (with agents) sample of cold round 4, and it left no record. The experiment was reopened (the reopening is recorded in `experiments/full-1`) and the sample re-run from a fresh cold cache. Separately, the StarSling Runners (with agents) sample of cold round 3 failed at `actions/checkout` in two test jobs before any test ran, and was re-run. Both are counted below. In every counted sample, no job waited more than 19 s for a runner.
 - **Warm runs and reused test results.** Before each warm sample, a seed run replays the previous upstream merge ([`eae01b5b`](https://github.com/dutchcoders/transfer.sh/commit/eae01b5b953adb928ec804f66ac8b8fe6bbfb503), onto `c2f4a4cf`) on the same configuration; its time is not counted. Every Go test result a warm sample reused from Go's test cache is linked in the evidence record to the seed run that produced it, and that seed run passed: [`experiments/full-1/evidence/evidence.json`](https://github.com/starsling-demo-org/benchmark-transfer.sh/blob/bench/control/experiments/full-1/evidence/evidence.json) (for example, warm round 1 with the agent PR reused results from seed [run 43828737998](https://github.com/starsling-demo-org/benchmark-transfer.sh/actions/runs/43828737998)).
 - **Runner sizes.** Upstream's `ubuntu-latest` jobs run on GitHub `ubuntu-26.04-4core` (4 vCPU, 16 GiB) and StarSling `starsling-ubuntu-26.04` (4 vCPU, 16 GiB). StarSling's 4 vCPU runners can burst to 5 vCPU and 32 GB RAM (Afterburner); GitHub's 4-core runners have 16 GB. Every job in this merge runs on those labels.
 - **Upstream reference (context only; not like-for-like; not the headline).** What upstream sees today: a median 25.5 min per merge to the default branch on upstream's own GitHub runners (n=12, most recent comparable merges to the default branch within the last 60 days; standard runners, warm caches, low commit rate; not a like-for-like replay).
-- **Failed or re-run samples** (replaced, not in the medians): GitHub-hosted runners: 0; StarSling Runners (with agents): 1.
+- **Failed or re-run samples** (replaced, not in the medians): GitHub-hosted runners: 0; StarSling Runners (with agents): 2 (1 that never finished and left no record, 1 that failed at checkout).
 
 </details>
 
