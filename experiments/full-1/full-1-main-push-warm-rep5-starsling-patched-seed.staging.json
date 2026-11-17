@@ -1,0 +1,59 @@
+{
+  "experimentId": "full-1",
+  "sampleId": "full-1-main-push-warm-rep5-starsling-patched-seed",
+  "scenarioName": "seed-parent",
+  "variant": "starsling-patched",
+  "profileName": "warm",
+  "currentStep": "completed",
+  "completedSteps": [
+    "1_acquire_lease",
+    "2_register_placeholders",
+    "3_disable_workflows_and_reset_refs",
+    "4_install_and_verify_trees",
+    "5_enable_scenario_workflows",
+    "6_trigger_event",
+    "7_await_downstream_completion"
+  ],
+  "controlBranch": "bench/control",
+  "defaultBranch": "showcase",
+  "benchmarkOwnedRefs": [
+    "refs/heads/main",
+    "refs/heads/showcase",
+    "refs/heads/bench/pr/seed-parent/head"
+  ],
+  "previousBenchmarkRefs": {
+    "refs/heads/main": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+    "refs/heads/showcase": "be70ac359c8a195a4a5fb3fed44a7e9bedfd9ff4",
+    "refs/heads/bench/pr/seed-parent/head": null
+  },
+  "observedUnrelatedRefs": {
+    "refs/heads/bench/control": "c6974420461b383f6c4d2c48dde8e47dc98d1c14",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "registeredPlaceholderWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "disabledWorkflows": [
+    ".github/workflows/billing-probe.yml",
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "enabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/test.yml"
+  ],
+  "updatedAt": "2026-11-16T14:54:03.619Z",
+  "leaseAcquiredAt": "2026-11-16T14:46:11.957Z",
+  "leaseHolder": "full-1:full-1-main-push-warm-rep5-starsling-patched-seed",
+  "installedTreeHash": "eb38474372271a772197ee8e9ffaf30f4a08417a97fa34edc7587da38a8e52f6",
+  "dispatchRecord": {
+    "idempotencyKey": "full-1:full-1-main-push-warm-rep5-starsling-patched-seed:seed-parent:starsling-patched",
+    "dispatchedAt": "2026-11-16T14:51:08.539Z",
+    "event": "push",
+    "targetRef": "refs/heads/main",
+    "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760"
+  }
+}

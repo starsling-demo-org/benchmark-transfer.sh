@@ -1,0 +1,312 @@
+[
+  {
+    "sampleId": "full-1-x1-main-push-cold-rep1-starsling-patched",
+    "inputFingerprint": "18af0a87908cf58018b599eda8e9c967d52dd9bcb13c5bad26f0fa86c3926b0e",
+    "runIds": [
+      43893723654,
+      43893723657
+    ],
+    "sources": [
+      {
+        "path": "full-1-x1-main-push-cold-rep1-starsling-patched/tests.json",
+        "sha256": "1812b8de11075f6e8e9cee46d716a4d32cbb01daa61952586719debee9caae97",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-x1-main-push-cold-rep1-starsling-patched/cache.json",
+        "sha256": "819a542f050774a1af1de7cdd44853dad1d0d83831afa407736e97632d4a4b51",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-x1-main-push-cold-rep1-starsling-patched/coverage.json",
+        "sha256": "22d09acb8f1cb17d4f7ddb32d01ae41e00dc542ad4b938cd3a5cb7289ca2c8d9",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/build-docker-images.yml",
+          ".github/workflows/test.yml"
+        ],
+        "excludedWorkflows": [
+          {
+            "filePath": ".github/workflows/release.yml",
+            "reason": "Does not trigger on \"push\" (triggers on: workflow_dispatch, release)"
+          }
+        ],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/build-docker-images.yml",
+            "workflowName": "deploy multi-architecture Docker images for transfer.sh with buildx",
+            "jobId": "buildx",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-26.04",
+              "starsling": "starsling-ubuntu-26.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-26.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/test.yml",
+            "workflowName": "test",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "expectedMatrixCount": 3,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-26.04",
+              "starsling": "starsling-ubuntu-26.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-26.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/test.yml",
+            "workflowName": "test",
+            "jobId": "golangci",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-26.04",
+              "starsling": "starsling-ubuntu-26.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-26.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/build-docker-images.yml#buildx",
+          ".github/workflows/test.yml#test",
+          ".github/workflows/test.yml#golangci"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "docker-image:linux/386",
+        "docker-image:linux/amd64",
+        "docker-image:linux/arm/v7",
+        "docker-image:linux/arm64",
+        "go-tests:go1.26",
+        "go-tests:go1.27",
+        "go-tests:tip",
+        "lint:golangci-lint"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/test.yml",
+        ".github/workflows/build-docker-images.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/test.yml#golangci": 1,
+        ".github/workflows/test.yml#test": 3,
+        ".github/workflows/build-docker-images.yml#buildx": 1
+      },
+      "observedCommands": [
+        "docker buildx build --platform linux/amd64,linux/arm/v7,linux/arm64,linux/386",
+        "go test ./...",
+        "go vet ./...",
+        "golangci-lint run --config .golangci.yml"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "go-binary:linux/386",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-binary:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-binary:linux/arm/v7",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-binary:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.26:.",
+          "verdict": "skipped",
+          "mode": "skipped"
+        },
+        {
+          "testId": "go-test:go1.26:cmd",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.26:server",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.26:server/storage",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.27:.",
+          "verdict": "skipped",
+          "mode": "skipped"
+        },
+        {
+          "testId": "go-test:go1.27:cmd",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.27:server",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:go1.27:server/storage",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:tip:.",
+          "verdict": "skipped",
+          "mode": "skipped"
+        },
+        {
+          "testId": "go-test:tip:cmd",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:tip:server",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-test:tip:server/storage",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-vet:go1.26",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-vet:go1.27",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "go-vet:tip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image-noroot:linux/386",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image-noroot:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image-noroot:linux/arm/v7",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image-noroot:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/386",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm/v7",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "lint:golangci-lint",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 25,
+          "total": 25,
+          "percentage": 100
+        },
+        "scopeHash": "d198dbec5cc4b30105bd9645def96a3d9461d1cb455ab3619ec8d4feb5db93a2"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-x1-main-push-cold-rep1-starsling-patched",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "20efd89137d4fe13122e1b4cd48b1deab0f34fbd",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "golangci-lint.cache-Linux-2967-0d851ffdfcf4fb5dbf6fba8bf04e8d82b22216f3",
+          "requestedRestoreKeys": [
+            "golangci-lint.cache-Linux-2967-"
+          ],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown"
+        },
+        {
+          "cacheKey": "gotip-Linux-X64-3c6d0928959aa02598fa073f2747a1b563d3a852",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown"
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 347
+    }
+  }
+]

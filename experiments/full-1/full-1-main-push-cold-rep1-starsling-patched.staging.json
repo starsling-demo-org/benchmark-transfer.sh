@@ -1,0 +1,58 @@
+{
+  "experimentId": "full-1",
+  "sampleId": "full-1-main-push-cold-rep1-starsling-patched",
+  "scenarioName": "main-push",
+  "variant": "starsling-patched",
+  "profileName": "cold",
+  "currentStep": "completed",
+  "completedSteps": [
+    "1_acquire_lease",
+    "2_register_placeholders",
+    "3_disable_workflows_and_reset_refs",
+    "4_install_and_verify_trees",
+    "5_enable_scenario_workflows",
+    "6_trigger_event",
+    "7_await_downstream_completion"
+  ],
+  "controlBranch": "bench/control",
+  "defaultBranch": "showcase",
+  "benchmarkOwnedRefs": [
+    "refs/heads/main",
+    "refs/heads/showcase",
+    "refs/heads/bench/pr/main-push/head"
+  ],
+  "previousBenchmarkRefs": {
+    "refs/heads/main": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+    "refs/heads/showcase": "83942c2a8768b7c731d1fd3217b7b7442bbec77a",
+    "refs/heads/bench/pr/main-push/head": null
+  },
+  "observedUnrelatedRefs": {
+    "refs/heads/bench/control": "c6974420461b383f6c4d2c48dde8e47dc98d1c14",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "registeredPlaceholderWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "disabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "enabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/test.yml"
+  ],
+  "updatedAt": "2026-11-16T02:42:02.563Z",
+  "leaseAcquiredAt": "2026-11-16T02:34:21.412Z",
+  "leaseHolder": "full-1:full-1-main-push-cold-rep1-starsling-patched",
+  "installedTreeHash": "701e8ed85495f0f0a74d97832102ea1776b441b2038c8e222309e4b5d09f266e",
+  "dispatchRecord": {
+    "idempotencyKey": "full-1:full-1-main-push-cold-rep1-starsling-patched:main-push:starsling-patched",
+    "dispatchedAt": "2026-11-16T02:39:10.185Z",
+    "event": "push",
+    "targetRef": "refs/heads/main",
+    "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69"
+  }
+}

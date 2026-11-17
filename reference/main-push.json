@@ -1,0 +1,430 @@
+{
+  "schemaVersion": 1,
+  "scenarioName": "main-push",
+  "upstreamRepository": "dutchcoders/transfer.sh",
+  "event": "push",
+  "headSha": "20efd89137d4fe13122e1b4cd48b1deab0f34fbd",
+  "retrievedAt": "2026-11-15T23:28:46.672Z",
+  "runs": [
+    {
+      "runId": 41252787938,
+      "attempt": 1,
+      "workflowPath": ".github/workflows/build-docker-images.yml",
+      "workflowName": "deploy multi-architecture Docker images for transfer.sh with buildx",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "htmlUrl": "https://github.com/dutchcoders/transfer.sh/actions/runs/41252787938",
+      "createdAt": "2026-10-31T23:30:10Z",
+      "startedAt": "2026-10-31T23:30:10Z",
+      "jobs": [
+        {
+          "id": 124689620715,
+          "name": "buildx",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-31T23:30:12Z",
+          "completedAt": "2026-10-31T23:57:59Z",
+          "durationSeconds": 1667,
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Checkout",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 3,
+              "name": "Prepare",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 4,
+              "name": "Set up QEMU",
+              "conclusion": "success",
+              "durationSeconds": 5
+            },
+            {
+              "number": 5,
+              "name": "Set up Docker Buildx",
+              "conclusion": "success",
+              "durationSeconds": 5
+            },
+            {
+              "number": 6,
+              "name": "Available platforms",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 7,
+              "name": "Docker Buildx (build)",
+              "conclusion": "success",
+              "durationSeconds": 1614
+            },
+            {
+              "number": 8,
+              "name": "Docker Login",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 9,
+              "name": "Docker Buildx (push)",
+              "conclusion": "success",
+              "durationSeconds": 22
+            },
+            {
+              "number": 10,
+              "name": "Docker Check Manifest",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 11,
+              "name": "Clear",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 20,
+              "name": "Post Set up Docker Buildx",
+              "conclusion": "success",
+              "durationSeconds": 15
+            },
+            {
+              "number": 21,
+              "name": "Post Set up QEMU",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 22,
+              "name": "Post Checkout",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 23,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "runId": 41252788045,
+      "attempt": 1,
+      "workflowPath": ".github/workflows/test.yml",
+      "workflowName": "test",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "htmlUrl": "https://github.com/dutchcoders/transfer.sh/actions/runs/41252788045",
+      "createdAt": "2026-10-31T23:30:10Z",
+      "startedAt": "2026-10-31T23:30:10Z",
+      "jobs": [
+        {
+          "id": 124689621331,
+          "name": "Linting",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-31T23:30:14Z",
+          "completedAt": "2026-10-31T23:30:33Z",
+          "durationSeconds": 19,
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 3,
+              "name": "Run actions/setup-go@v7",
+              "conclusion": "success",
+              "durationSeconds": 11
+            },
+            {
+              "number": 4,
+              "name": "golangci-lint",
+              "conclusion": "success",
+              "durationSeconds": 2
+            },
+            {
+              "number": 6,
+              "name": "Post golangci-lint",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 7,
+              "name": "Post Run actions/setup-go@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 8,
+              "name": "Post Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 9,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        },
+        {
+          "id": 124689621498,
+          "name": "Test with tip",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-31T23:30:19Z",
+          "completedAt": "2026-10-31T23:34:39Z",
+          "durationSeconds": 260,
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 3,
+              "name": "Install Go tip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 4,
+              "name": "Install bootstrap Go for tip",
+              "conclusion": "success",
+              "durationSeconds": 16
+            },
+            {
+              "number": 5,
+              "name": "Install Go tip",
+              "conclusion": "success",
+              "durationSeconds": 179
+            },
+            {
+              "number": 6,
+              "name": "Vet and test no tip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 7,
+              "name": "Vet and test gotip",
+              "conclusion": "success",
+              "durationSeconds": 60
+            },
+            {
+              "number": 13,
+              "name": "Post Install bootstrap Go for tip",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        },
+        {
+          "id": 124689621511,
+          "name": "Test with 1.27",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-31T23:30:21Z",
+          "completedAt": "2026-10-31T23:30:42Z",
+          "durationSeconds": 21,
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 3,
+              "name": "Install Go 1.27",
+              "conclusion": "success",
+              "durationSeconds": 14
+            },
+            {
+              "number": 4,
+              "name": "Install bootstrap Go for tip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 5,
+              "name": "Install Go 1.27",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 6,
+              "name": "Vet and test no tip",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 7,
+              "name": "Vet and test gotip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 13,
+              "name": "Post Install Go 1.27",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        },
+        {
+          "id": 124689621538,
+          "name": "Test with 1.26",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-10-31T23:30:23Z",
+          "completedAt": "2026-10-31T23:30:34Z",
+          "durationSeconds": 11,
+          "labels": [
+            "ubuntu-latest"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 3,
+              "name": "Install Go 1.26",
+              "conclusion": "success",
+              "durationSeconds": 6
+            },
+            {
+              "number": 4,
+              "name": "Install bootstrap Go for tip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 5,
+              "name": "Install Go 1.26",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 6,
+              "name": "Vet and test no tip",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 7,
+              "name": "Vet and test gotip",
+              "conclusion": "skipped",
+              "durationSeconds": 0
+            },
+            {
+              "number": 13,
+              "name": "Post Install Go 1.26",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v7",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "wallClockSeconds": 1670,
+    "runnerSeconds": 1978
+  }
+}

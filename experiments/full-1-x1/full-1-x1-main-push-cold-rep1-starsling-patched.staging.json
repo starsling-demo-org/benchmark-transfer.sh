@@ -1,0 +1,59 @@
+{
+  "experimentId": "full-1-x1",
+  "sampleId": "full-1-x1-main-push-cold-rep1-starsling-patched",
+  "scenarioName": "main-push",
+  "variant": "starsling-patched",
+  "profileName": "cold",
+  "currentStep": "completed",
+  "completedSteps": [
+    "1_acquire_lease",
+    "2_register_placeholders",
+    "3_disable_workflows_and_reset_refs",
+    "4_install_and_verify_trees",
+    "5_enable_scenario_workflows",
+    "6_trigger_event",
+    "7_await_downstream_completion"
+  ],
+  "controlBranch": "bench/control",
+  "defaultBranch": "showcase",
+  "benchmarkOwnedRefs": [
+    "refs/heads/main",
+    "refs/heads/showcase",
+    "refs/heads/bench/pr/main-push/head"
+  ],
+  "previousBenchmarkRefs": {
+    "refs/heads/main": null,
+    "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+    "refs/heads/bench/pr/main-push/head": null
+  },
+  "observedUnrelatedRefs": {
+    "refs/heads/bench/control": "c6974420461b383f6c4d2c48dde8e47dc98d1c14",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "registeredPlaceholderWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "disabledWorkflows": [
+    ".github/workflows/billing-probe.yml",
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "enabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/test.yml"
+  ],
+  "updatedAt": "2026-11-16T15:14:25.374Z",
+  "leaseAcquiredAt": "2026-11-16T15:03:38.032Z",
+  "leaseHolder": "full-1-x1:full-1-x1-main-push-cold-rep1-starsling-patched",
+  "installedTreeHash": "701e8ed85495f0f0a74d97832102ea1776b441b2038c8e222309e4b5d09f266e",
+  "dispatchRecord": {
+    "idempotencyKey": "full-1-x1:full-1-x1-main-push-cold-rep1-starsling-patched:main-push:starsling-patched",
+    "dispatchedAt": "2026-11-16T15:11:30.453Z",
+    "event": "push",
+    "targetRef": "refs/heads/main",
+    "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69"
+  }
+}

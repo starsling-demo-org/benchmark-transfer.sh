@@ -1,0 +1,39 @@
+{
+  "owner": "diag-1",
+  "expectedRefs": {
+    "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+    "refs/heads/main": null
+  },
+  "workflowStates": {
+    ".github/workflows/build-docker-images.yml": "absent",
+    ".github/workflows/release.yml": "absent",
+    ".github/workflows/test.yml": "absent"
+  },
+  "dispatches": {
+    "diag-1:diag-1-main-push-cold-rep1-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T01:03:28.494Z"
+    },
+    "diag-1:diag-1-main-push-cold-rep1-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T01:30:18.709Z"
+    }
+  },
+  "leaseSha": "c9e47720629599e8c44cc65a407023f2c6bb61ce",
+  "initialRefs": {
+    "refs/heads/bench/control": "119b7c1db0133bfd775a3eb1579dec215f9482e0",
+    "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "recovery": {
+    "phase": "completed",
+    "restoredRefs": {
+      "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+      "refs/heads/main": null
+    },
+    "disabledWorkflows": [
+      ".github/workflows/build-docker-images.yml",
+      ".github/workflows/test.yml"
+    ]
+  }
+}

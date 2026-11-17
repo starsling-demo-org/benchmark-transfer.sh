@@ -1,0 +1,39 @@
+{
+  "cacheEvents": [
+    {
+      "cacheKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "requestedRestoreKeys": [],
+      "matchedKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main"
+    },
+    {
+      "cacheKey": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "requestedRestoreKeys": [],
+      "matchedKey": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main"
+    },
+    {
+      "cacheKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "requestedRestoreKeys": [],
+      "matchedKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main"
+    },
+    {
+      "cacheKey": "gotip-Linux-X64-3c6d0928959aa02598fa073f2747a1b563d3a852",
+      "requestedRestoreKeys": [],
+      "matchedKey": "gotip-Linux-X64-3c6d0928959aa02598fa073f2747a1b563d3a852",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main"
+    },
+    {
+      "cacheKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "requestedRestoreKeys": [],
+      "matchedKey": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main"
+    }
+  ]
+}

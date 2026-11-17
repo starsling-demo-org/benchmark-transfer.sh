@@ -1,0 +1,276 @@
+{
+  "tests": [
+    {
+      "testId": "go-binary:linux/386",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-binary:linux/amd64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-binary:linux/arm/v7",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-binary:linux/arm64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-test:go1.26:.",
+      "verdict": "skipped",
+      "mode": "skipped"
+    },
+    {
+      "testId": "go-test:go1.26:cmd",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:cmd",
+        "testCodeHash": "go-test-cache:cmd",
+        "configHash": "go-test-cache:cmd",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.26.11",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:cmd",
+          "testCodeHash": "go-test-cache:cmd",
+          "configHash": "go-test-cache:cmd",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.26.11",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:go1.26:server",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:server",
+        "testCodeHash": "go-test-cache:server",
+        "configHash": "go-test-cache:server",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.26.11",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:server",
+          "testCodeHash": "go-test-cache:server",
+          "configHash": "go-test-cache:server",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.26.11",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:go1.26:server/storage",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:server/storage",
+        "testCodeHash": "go-test-cache:server/storage",
+        "configHash": "go-test-cache:server/storage",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.26.11",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:server/storage",
+          "testCodeHash": "go-test-cache:server/storage",
+          "configHash": "go-test-cache:server/storage",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.26.11",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:go1.27:.",
+      "verdict": "skipped",
+      "mode": "skipped"
+    },
+    {
+      "testId": "go-test:go1.27:cmd",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:cmd",
+        "testCodeHash": "go-test-cache:cmd",
+        "configHash": "go-test-cache:cmd",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.27.4",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:cmd",
+          "testCodeHash": "go-test-cache:cmd",
+          "configHash": "go-test-cache:cmd",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.27.4",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:go1.27:server",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:server",
+        "testCodeHash": "go-test-cache:server",
+        "configHash": "go-test-cache:server",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.27.4",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:server",
+          "testCodeHash": "go-test-cache:server",
+          "configHash": "go-test-cache:server",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.27.4",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:go1.27:server/storage",
+      "verdict": "passed",
+      "mode": "reused",
+      "currentFingerprint": {
+        "sourceDepsHash": "go-test-cache:server/storage",
+        "testCodeHash": "go-test-cache:server/storage",
+        "configHash": "go-test-cache:server/storage",
+        "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+        "toolchain": "go1.27.4",
+        "platform": "linux/amd64",
+        "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+      },
+      "seedProvenance": {
+        "seedRunId": 43846267928,
+        "seedSucceeded": true,
+        "seedFingerprint": {
+          "sourceDepsHash": "go-test-cache:server/storage",
+          "testCodeHash": "go-test-cache:server/storage",
+          "configHash": "go-test-cache:server/storage",
+          "lockfilesHash": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+          "toolchain": "go1.27.4",
+          "platform": "linux/amd64",
+          "envHash": "03b4f29e6fe44c1d2ece4c035bbe1be1db0d20fe6bf82108c917659769b7f20c"
+        }
+      }
+    },
+    {
+      "testId": "go-test:tip:.",
+      "verdict": "skipped",
+      "mode": "skipped"
+    },
+    {
+      "testId": "go-test:tip:cmd",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-test:tip:server",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-test:tip:server/storage",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-vet:go1.26",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-vet:go1.27",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "go-vet:tip",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image-noroot:linux/386",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image-noroot:linux/amd64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image-noroot:linux/arm/v7",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image-noroot:linux/arm64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image:linux/386",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image:linux/amd64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image:linux/arm/v7",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "image:linux/arm64",
+      "verdict": "passed",
+      "mode": "executed"
+    },
+    {
+      "testId": "lint:golangci-lint",
+      "verdict": "passed",
+      "mode": "executed"
+    }
+  ]
+}

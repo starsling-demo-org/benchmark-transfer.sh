@@ -1,0 +1,50 @@
+diff --git a/.github/workflows/test.yml b/.github/workflows/test.yml
+index ecb632f..47ee7dd 100644
+--- a/.github/workflows/test.yml
++++ b/.github/workflows/test.yml
+@@ -29,11 +29,22 @@ jobs:
+         with:
+           go-version: stable
+           check-latest: true
++      - name: Find Go tip's commit
++        if: ${{ matrix.go_version == 'tip' }}
++        id: tip
++        run: echo "sha=$(git ls-remote https://go.googlesource.com/go HEAD | cut -f1)" >> "$GITHUB_OUTPUT"
++      - name: Cache Go tip
++        if: ${{ matrix.go_version == 'tip' }}
++        id: tip-cache
++        uses: actions/cache@v4
++        with:
++          path: ~/sdk/gotip
++          key: gotip-${{ runner.os }}-${{ runner.arch }}-${{ steps.tip.outputs.sha }}
+       - name: Install Go ${{ matrix.go_version }}
+         if: ${{ matrix.go_version == 'tip' }}
+         run: |
+           go install golang.org/dl/gotip@latest
+-          `go env GOPATH`/bin/gotip download
++          if [ "${{ steps.tip-cache.outputs.cache-hit }}" != "true" ]; then `go env GOPATH`/bin/gotip download; fi
+       - name: Vet and test no tip
+         if: ${{ matrix.go_version != 'tip' }}
+         run: |
+diff --git a/Dockerfile b/Dockerfile
+index 0e73ddd..81d6574 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -1,6 +1,7 @@
+ # Default to Go 1.27
+ ARG GO_VERSION=1.27.3
+-FROM golang:${GO_VERSION}-alpine as build
++FROM --platform=$BUILDPLATFORM golang:${GO_VERSION}-alpine as build
++ARG TARGETOS TARGETARCH TARGETVARIANT
+ 
+ # Necessary to run 'go get' and to compile the linked binary
+ RUN apk add git musl-dev mailcap
+@@ -14,7 +15,7 @@ RUN go mod download
+ COPY . .
+ 
+ # build & install server
+-RUN CGO_ENABLED=0 go build -tags netgo -ldflags "-X github.com/dutchcoders/transfer.sh/cmd.Version=$(git describe --tags) -a -s -w -extldflags '-static'" -o /go/bin/transfersh
++RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH GOARM=${TARGETVARIANT#v} go build -tags netgo -ldflags "-X github.com/dutchcoders/transfer.sh/cmd.Version=$(git describe --tags) -a -s -w -extldflags '-static'" -o /go/bin/transfersh
+ 
+ ARG PUID=5000 \
+     PGID=5000 \

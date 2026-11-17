@@ -1,0 +1,58 @@
+{
+  "experimentId": "full-1",
+  "sampleId": "full-1-main-push-cold-rep3-starsling-baseline",
+  "scenarioName": "main-push",
+  "variant": "starsling-baseline",
+  "profileName": "cold",
+  "currentStep": "completed",
+  "completedSteps": [
+    "1_acquire_lease",
+    "2_register_placeholders",
+    "3_disable_workflows_and_reset_refs",
+    "4_install_and_verify_trees",
+    "5_enable_scenario_workflows",
+    "6_trigger_event",
+    "7_await_downstream_completion"
+  ],
+  "controlBranch": "bench/control",
+  "defaultBranch": "showcase",
+  "benchmarkOwnedRefs": [
+    "refs/heads/main",
+    "refs/heads/showcase",
+    "refs/heads/bench/pr/main-push/head"
+  ],
+  "previousBenchmarkRefs": {
+    "refs/heads/main": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+    "refs/heads/showcase": "83942c2a8768b7c731d1fd3217b7b7442bbec77a",
+    "refs/heads/bench/pr/main-push/head": null
+  },
+  "observedUnrelatedRefs": {
+    "refs/heads/bench/control": "c6974420461b383f6c4d2c48dde8e47dc98d1c14",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "registeredPlaceholderWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "disabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/test.yml"
+  ],
+  "enabledWorkflows": [
+    ".github/workflows/build-docker-images.yml",
+    ".github/workflows/test.yml"
+  ],
+  "updatedAt": "2026-11-16T04:37:39.035Z",
+  "leaseAcquiredAt": "2026-11-16T04:23:48.687Z",
+  "leaseHolder": "full-1:full-1-main-push-cold-rep3-starsling-baseline",
+  "installedTreeHash": "6d54166b95d086e171ec50ef0d5b3895b5f02361b31964de9fce7b61a3e8491f",
+  "dispatchRecord": {
+    "idempotencyKey": "full-1:full-1-main-push-cold-rep3-starsling-baseline:main-push:starsling-baseline",
+    "dispatchedAt": "2026-11-16T04:28:37.421Z",
+    "event": "push",
+    "targetRef": "refs/heads/main",
+    "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "owner": "full-1",
+  "expectedRefs": {
+    "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+    "refs/heads/main": null
+  },
+  "workflowStates": {
+    ".github/workflows/build-docker-images.yml": "absent",
+    ".github/workflows/release.yml": "absent",
+    ".github/workflows/test.yml": "absent",
+    ".github/workflows/billing-probe.yml": "active"
+  },
+  "dispatches": {
+    "full-1:full-1-main-push-cold-rep1-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T01:50:23.820Z"
+    },
+    "full-1:full-1-main-push-cold-rep1-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T02:05:08.038Z"
+    },
+    "full-1:full-1-main-push-cold-rep1-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T02:39:10.185Z"
+    },
+    "full-1:full-1-main-push-cold-rep2-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T02:47:38.594Z"
+    },
+    "full-1:full-1-main-push-cold-rep2-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T02:56:06.922Z"
+    },
+    "full-1:full-1-main-push-cold-rep2-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T03:10:15.992Z"
+    },
+    "full-1:full-1-main-push-cold-rep3-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T03:44:18.402Z"
+    },
+    "full-1:full-1-main-push-cold-rep3-starsling-patched-retry1:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T03:53:58.158Z"
+    },
+    "full-1:full-1-main-push-cold-rep3-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T04:02:27.881Z"
+    },
+    "full-1:full-1-main-push-cold-rep3-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T04:28:37.421Z"
+    },
+    "full-1:full-1-main-push-cold-rep4-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T04:42:33.942Z"
+    },
+    "full-1:full-1-main-push-cold-rep4-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T06:05:46.606Z"
+    },
+    "full-1:full-1-main-push-cold-rep4-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T06:14:19.049Z"
+    },
+    "full-1:full-1-main-push-cold-rep5-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T06:28:32.020Z"
+    },
+    "full-1:full-1-main-push-cold-rep5-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T06:42:45.954Z"
+    },
+    "full-1:full-1-main-push-cold-rep5-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T07:06:34.361Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-github-baseline-seed:seed-parent:github-baseline": {
+      "headSha": "4ed2b4d3d25a572dae2f026b318b559a0618a9ca",
+      "dispatchedAt": "2026-11-16T07:15:08.497Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T07:34:10.103Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-starsling-patched-seed:seed-parent:starsling-patched": {
+      "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760",
+      "dispatchedAt": "2026-11-16T08:07:22.915Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T08:13:44.754Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-starsling-baseline-seed:seed-parent:starsling-baseline": {
+      "headSha": "2fb20fd7cd78b8c28b9b4b6ec32c88f0084a255c",
+      "dispatchedAt": "2026-11-16T08:22:28.575Z"
+    },
+    "full-1:full-1-main-push-warm-rep1-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T08:35:28.163Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-starsling-baseline-seed:seed-parent:starsling-baseline": {
+      "headSha": "2fb20fd7cd78b8c28b9b4b6ec32c88f0084a255c",
+      "dispatchedAt": "2026-11-16T08:48:15.077Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T09:01:11.442Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-github-baseline-seed:seed-parent:github-baseline": {
+      "headSha": "4ed2b4d3d25a572dae2f026b318b559a0618a9ca",
+      "dispatchedAt": "2026-11-16T09:15:50.386Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T09:47:21.504Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-starsling-patched-seed:seed-parent:starsling-patched": {
+      "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760",
+      "dispatchedAt": "2026-11-16T10:09:21.329Z"
+    },
+    "full-1:full-1-main-push-warm-rep2-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T10:15:59.917Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-github-baseline-seed:seed-parent:github-baseline": {
+      "headSha": "4ed2b4d3d25a572dae2f026b318b559a0618a9ca",
+      "dispatchedAt": "2026-11-16T10:24:38.806Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T10:52:54.849Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-starsling-baseline-seed:seed-parent:starsling-baseline": {
+      "headSha": "2fb20fd7cd78b8c28b9b4b6ec32c88f0084a255c",
+      "dispatchedAt": "2026-11-16T11:25:11.613Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T11:36:15.730Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-starsling-patched-seed:seed-parent:starsling-patched": {
+      "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760",
+      "dispatchedAt": "2026-11-16T11:50:34.433Z"
+    },
+    "full-1:full-1-main-push-warm-rep3-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T11:57:25.074Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-starsling-baseline-seed:seed-parent:starsling-baseline": {
+      "headSha": "2fb20fd7cd78b8c28b9b4b6ec32c88f0084a255c",
+      "dispatchedAt": "2026-11-16T12:06:34.683Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T12:19:22.599Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-starsling-patched-seed:seed-parent:starsling-patched": {
+      "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760",
+      "dispatchedAt": "2026-11-16T12:33:41.893Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T12:40:36.154Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-github-baseline-seed:seed-parent:github-baseline": {
+      "headSha": "4ed2b4d3d25a572dae2f026b318b559a0618a9ca",
+      "dispatchedAt": "2026-11-16T12:49:12.513Z"
+    },
+    "full-1:full-1-main-push-warm-rep4-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T13:12:47.152Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-github-baseline-seed:seed-parent:github-baseline": {
+      "headSha": "4ed2b4d3d25a572dae2f026b318b559a0618a9ca",
+      "dispatchedAt": "2026-11-16T13:37:35.239Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-github-baseline:main-push:github-baseline": {
+      "headSha": "6e93d8cc6bc2ed9e610a57cd78429350093faabf",
+      "dispatchedAt": "2026-11-16T14:01:47.315Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-starsling-baseline-seed:seed-parent:starsling-baseline": {
+      "headSha": "2fb20fd7cd78b8c28b9b4b6ec32c88f0084a255c",
+      "dispatchedAt": "2026-11-16T14:23:43.012Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-starsling-baseline:main-push:starsling-baseline": {
+      "headSha": "6a2ef8a91f41c7111c45e8b52e7e138f0df21d7b",
+      "dispatchedAt": "2026-11-16T14:36:34.753Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-starsling-patched-seed:seed-parent:starsling-patched": {
+      "headSha": "a55ebbc0aecbd372cfd42f9bcf3d716e4d68f760",
+      "dispatchedAt": "2026-11-16T14:51:08.539Z"
+    },
+    "full-1:full-1-main-push-warm-rep5-starsling-patched:main-push:starsling-patched": {
+      "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+      "dispatchedAt": "2026-11-16T14:57:50.258Z"
+    }
+  },
+  "leaseSha": "10a38248028ba1f5cf8dd35f930c2117fc71ddac",
+  "initialRefs": {
+    "refs/heads/bench/control": "c6974420461b383f6c4d2c48dde8e47dc98d1c14",
+    "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+    "refs/heads/starsling/develop": "7df2c952a7a94088a98020270ef6812763b12bbc"
+  },
+  "reopenedFrom": [
+    {
+      "at": "2026-11-16T05:59:20.304Z",
+      "reason": "billing-gate stall 04:56-05:47Z",
+      "excludedSamples": [
+        "full-1-main-push-cold-rep4-starsling-patched"
+      ],
+      "recovery": {
+        "phase": "completed",
+        "restoredRefs": {
+          "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+          "refs/heads/main": null
+        },
+        "disabledWorkflows": [
+          ".github/workflows/build-docker-images.yml",
+          ".github/workflows/test.yml"
+        ]
+      },
+      "removedDispatches": {
+        "full-1:full-1-main-push-cold-rep4-starsling-patched:main-push:starsling-patched": {
+          "headSha": "775d123eac7bfbb0dc6ca455d7a05dedba696c69",
+          "dispatchedAt": "2026-11-16T05:06:43.199Z"
+        }
+      },
+      "removedCacheSnapshots": {
+        "full-1-main-push-cold-rep4-starsling-patched": [
+          {
+            "id": 10579779361,
+            "ref": "refs/heads/main",
+            "key": "docker.io--tonistiigi--binfmt-latest-linux-x64",
+            "version": "0f256030c2162b26c4af1b51965f055655033ea67381759b247836dd596e3432",
+            "last_accessed_at": "2026-11-16T05:01:12.532084Z",
+            "created_at": "2026-11-16T05:01:12.532084Z",
+            "size_in_bytes": 32698173
+          },
+          {
+            "id": 10579778643,
+            "ref": "refs/heads/main",
+            "key": "buildx-dl-bin-0.39.0-linux-x64",
+            "version": "eaca53f0de6e7baf350e1faea4c5c0f2d36e2d433eff79cc3cd2840bc312f5a3",
+            "last_accessed_at": "2026-11-16T05:01:11.360095Z",
+            "created_at": "2026-11-16T05:01:11.360095Z",
+            "size_in_bytes": 22797408
+          },
+          {
+            "id": 10579305499,
+            "ref": "refs/heads/main",
+            "key": "setup-go-Linux-x64-ubuntu26-go-1.26.11-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+            "version": "1cb9802e5b5c597f946446bf4b3344ff6eb214d674e7138050afa0c8b9619604",
+            "last_accessed_at": "2026-11-16T04:43:47.807476Z",
+            "created_at": "2026-11-16T04:43:47.807476Z",
+            "size_in_bytes": 401744173
+          },
+          {
+            "id": 10579303334,
+            "ref": "refs/heads/main",
+            "key": "setup-go-Linux-x64-ubuntu26-go-1.27.4-ffbe62c0f392a123f731c2bc25df60141c19de7ab3de8cb47655b31c7f62da7e",
+            "version": "1cb9802e5b5c597f946446bf4b3344ff6eb214d674e7138050afa0c8b9619604",
+            "last_accessed_at": "2026-11-16T04:43:43.274531Z",
+            "created_at": "2026-11-16T04:43:43.274531Z",
+            "size_in_bytes": 402295735
+          },
+          {
+            "id": 10579301908,
+            "ref": "refs/heads/main",
+            "key": "golangci-lint.cache-Linux-2967-0d851ffdfcf4fb5dbf6fba8bf04e8d82b22216f3",
+            "version": "a8bb4d051abedb2e113db79282817e72e10ab797944320637e9cb6fad8ce5a5c",
+            "last_accessed_at": "2026-11-16T04:43:38.052191Z",
+            "created_at": "2026-11-16T04:43:38.052191Z",
+            "size_in_bytes": 782833
+          }
+        ]
+      }
+    }
+  ],
+  "recovery": {
+    "phase": "completed",
+    "restoredRefs": {
+      "refs/heads/showcase": "aec18863743cd3901beb87ab72fe6defe2fba3c1",
+      "refs/heads/main": null
+    },
+    "disabledWorkflows": [
+      ".github/workflows/build-docker-images.yml",
+      ".github/workflows/test.yml"
+    ]
+  }
+}
